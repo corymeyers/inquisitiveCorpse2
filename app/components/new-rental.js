@@ -26,20 +26,11 @@ export default Ember.Component.extend({
       } else {
         typeFromForm = "";
       }
-      var imageFromForm;
-      if (typeof this.get('image') !== "undefined") {
-        imageFromForm = this.get('image');
-      } else {
-        imageFromForm = "http://resource.mmgn.com/Gallery/full/A-dead-Link-404-1041428.jpg";
-      }
-
 
       var params = {
         owner: ownerFromForm,
         city: cityFromForm,
         type: typeFromForm,
-        image: imageFromForm,
-        bedrooms: this.get('bedrooms'),//if left blank, this will not save to Firebase.
       };
       console.log(params);
       this.set('addNewRental', false);
