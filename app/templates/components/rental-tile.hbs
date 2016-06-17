@@ -1,3 +1,4 @@
-<li>{{rental.type}}<br>
-  Answered by: {{rental.owner}}
+
+<li>{{#link-to 'rental' rental.id}}{{fullLocation}}{{/link-to}}<br>
+  <!-- Answered by: {{rental.owner}} -->
 </li>

@@ -3,7 +3,7 @@
 
 <ul>
   {{#each model.cities as |city|}}
-    <li>{{#link-to 'city' city.id}}{{city.country}} {{/link-to}}<br> Originally aswered by: {{city.name}}</li>
+    <li>{{city-popularity city}}{{#link-to 'city' city.id}}{{city.country}} {{/link-to}}<br> Originally aswered by: {{city.name}}</li>
   {{/each}}
 </ul>
 

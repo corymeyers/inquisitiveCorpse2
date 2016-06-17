@@ -1,9 +1,8 @@
+{{#link-to 'index'}}Home{{/link-to}}
+
 <h1>{{model.country}} </h1>
-
-
-
-<!-- {{city-tile city=model destroyCity="destroyCity"}} -->
-
+{{update-city city=city update="update"}}
+<h3>Prior answers:</h3>
 <ul>
   {{#each model.rentals as |rental|}}
      {{rental-tile rental=rental}}

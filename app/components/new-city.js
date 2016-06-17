@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     cityFormShow() {
       this.set('addNewCity', true);
     },
+    update(city, params) {
+      this.sendAction('update', city, params);
+    },
     saveCity() {
       var params = {
         name: this.get('name'),

@@ -1,23 +1,19 @@
-{{#if addNewCity}}
-    <h3>New Answer</h3>
-
-    <div>
+{{#if updateCityForm}}
+  <div>
       <form>
-
         <div class="form-group">
           <label for="name">Your name:</label>
           {{input value=name id="name"}}
         </div>
 
         <div class="form-group">
-          <label for="country">Your answer:</label>
+          <label for="country">Change question to:</label>
           {{input value=country id="country"}}
         </div>
 
-        <button {{action 'saveCity'}}>Submit</button>
-
+        <button {{action 'update' city}}>Save</button>
       </form>
     </div>
-  {{else}}
-    <button {{action 'cityFormShow'}}>New Answer</button>
+{{else}}
+    <button {{action 'updateCityForm'}}>Change question</button>
 {{/if}}
