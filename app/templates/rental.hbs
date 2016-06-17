@@ -3,3 +3,6 @@
 {{rental-tile rental=model}}
 
 <!-- {{new-city save2="save3" rental=model}} -->
+{{#each model as |rental|}}
+  {{rental-tile rental=rental}}
+{{/each}}
